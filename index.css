@@ -1,0 +1,190 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root{
+    --color_azul: rgb(0, 0, 190);
+}
+
+body {
+    background-color: #000000;
+    overflow-x: hidden; /* Evita scroll horizontal, pero permite el vertical */
+}
+
+/* Espaciadores */
+.cuadro_negro {
+    height: 40px;
+}
+
+.degradado_azul_negro {
+    background: linear-gradient( var(--color_azul), black);
+    height: 20px;
+}
+
+/* Navegación */
+nav {
+    background-color: var(--color_azul);
+    padding: 15px 40px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* Sección de Imagen (Hero) */
+.fondo_imagen {
+    position: relative;
+    height: 85vh; /* Ajustado a 80% de la pantalla para ver que hay contenido abajo */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo_imagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/fondo.jpg'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.2); /* Oscurece la imagen para resaltar el texto */
+    z-index: 1;
+}
+
+.texto_fondo_imagen {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.texto_fondo_imagen h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 20px var(--color-azul), 
+        0 0 80px var(--color-azul);
+}
+
+.contenedor_cajas{
+    margin: 0 20%;
+}
+
+.caja{
+    text-align: center;
+    display: flex;
+    margin: 15% 0;
+    }
+
+.texto, .imagen {
+    color: white;
+    flex: 1;
+    height: 300px;
+}
+
+.imagen{
+    transition: transform 0.3s;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centro {
+    width: 200px;
+    background-color: black;
+}
+
+p{
+    font-size: 20px;
+}
+
+.imagen:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 5px rgba(255, 102, 0, 0.562);
+    border: solid 2px rgb(255, 0, 0);
+}
+
+.trabajar_con_nosotros{
+    color: white;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.triple_cuadro {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #000; /* Asegura que el fondo sea negro */
+    flex-wrap: wrap; /* Para que en celulares se pongan uno abajo del otro */
+}
+
+.cuadro {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    border: solid 1px white;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque de cristal */
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.cuadro h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.cuadro:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--color_azul); /* Usa tu variable de azul */
+    box-shadow: 0 0 20px rgb(50, 50, 255); /* Resplandor azul suave */
+}
+
+
+footer{
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+
